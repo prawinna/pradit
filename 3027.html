@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Our Love Website</title>
+		<style>
+			div {
+				text-align: center;
+				padding-top: 200px;
+				canvas { margin-top: 100px; border: 10px solid #ccc; }
+			}
+			#reject {
+				position:relative;
+				top: 0;
+				left: 0;
+				transition: all .1s ease-in-out;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<h1>Welcome to our love-filled website!!!</h1>
+			<h5>เบ้บๆรักเค้าแค่ไหนนน</h5>
+			<button id="accept">รักมากที่สุดในจักรวาล</button>
+			<button id="reject">ไม่รัก?</button>
+			<button id="point">รักดีมั้ยน้าาาา</button>
+			<button id="remove">กล่องสำนึกผิดTT</button>
+			<h2> <img src="C:\Users\Admin\Downloads\IMG_9082.jpg">
+		</div>
+		<script>
+			//code here
+			document.getElementById('accept').addEventListener('click', function(e){
+ 				alert('เค้าก็รักเบ้บๆที่สุดเท่าจักรวาลเหมือนกันจุ๊บๆๆๆ');
+			});
+
+			document.getElementById('reject').addEventListener('click', function(e){
+				this.style.top = randomNumber(0, 200) + 'px';
+				this.style.left = randomNumber(0, 200) + 'px';
+			});
+
+			function randomNumber(min,max) {
+				return Math.floor(Math.random()*(max-min+1)+min);
+			}
+
+			document.getElementById('point').addEventListener('click', function(e){
+ 				alert('เดี๋ยวเถอะ!!! กดตรงนี้เพราะลังเลหรอ! แต่ยังไงเค้าก็รักเบ้บๆอยู่ดี :p');
+			});
+
+			document.getElementById('remove').addEventListener('click', function(e){
+ 				alert('เค้าขอโทษที่เค้าพูดไม่ดีกับเบ้บๆแล้วก็นอยเบ้บๆด้วย ขอโทษนะคะเบ้บๆเค้าแค่เป็นห่วงเบ้บๆมากๆไม่อยากให้ใครมาทำให้เบ้บเค้ารู้สึกไม่ดีใส่เลยยย แต่ก็ไม่อยากให้เบ้บๆมองว่าเค้าไม่เข้าใจเบ้บๆนะ เค้าพยายามเข้าใจเบ้บๆทุกครั้งที่เค้าพูดไปเพราะเค้าคิดว่ามันจะส่งผลที่ดีในอนาคตของเบ้บๆในการใช้ชีวิตการทำงาน เค้าก็แค่หวังดี....เบ้บๆอย่าโมโหหงุดหงิดเค้าเลยนะคะ');
+			});
+		</script>
+	</body>
+</html>
